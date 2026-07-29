@@ -27,17 +27,18 @@ button, input, select { font: inherit; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
   padding: 0 5vw;
   height: 36px;
+  min-height: 36px;
   background: var(--dark);
   color: #d1d5db;
   font-size: 11px;
-  flex-wrap: wrap;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.topbar-right { display: flex; gap: 20px; }
+.topbar-right { display: flex; gap: 20px; flex-shrink: 0; }
 .topbar a { color: #fff; font-weight: 600; }
-.topbar-left { color: var(--gold); }
+.topbar-left { color: var(--gold); overflow: hidden; text-overflow: ellipsis; }
 
 /* ── Header ────────────────────────────────── */
 .header {
@@ -76,28 +77,19 @@ button, input, select { font: inherit; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  overflow: hidden;
-}
-.hero-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 60%;
-}
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(20,21,23,0.82) 0%, rgba(20,21,23,0.65) 60%, rgba(20,21,23,0.5) 100%);
+  background-image: linear-gradient(to bottom, rgba(20,21,23,0.88) 0%, rgba(20,21,23,0.72) 55%, rgba(20,21,23,0.55) 100%), url('../public/zero-down/hero-house.jpg');
+  background-size: cover;
+  background-position: center 55%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
 .hero-body {
-  position: relative;
-  z-index: 2;
   width: min(var(--max), calc(100% - 40px));
   margin: 0 auto;
   padding: 80px 0 60px;
   color: #fff;
+  position: relative;
+  z-index: 1;
 }
 .eyebrow {
   display: flex;
@@ -212,12 +204,17 @@ button, input, select { font: inherit; }
   margin: 0 auto;
   min-height: 620px;
 }
-.process-photo { position: relative; overflow: hidden; }
-.process-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.process-photo {
+  position: relative;
+  min-height: 500px;
+  background-image: url('../public/zero-down/hero-house.jpg');
+  background-size: cover;
+  background-position: center;
+}
 .agent-chip {
   position: absolute;
   bottom: 28px;
-  right: 28px;
+  left: 28px;
   display: flex;
   align-items: center;
   gap: 12px;
