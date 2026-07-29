@@ -92,17 +92,22 @@ button, input, select, textarea { font: inherit; }
   z-index: 2;
 }
 .eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+  margin: 0 0 19px;
   color: var(--gold) !important;
-  font-size: 12px;
-  font-weight: 750;
-  letter-spacing: 0.15em;
   text-transform: uppercase;
-  margin-bottom: 18px;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: .18em;
 }
-.eyebrow span { display: inline-block; width: 30px; height: 2px; background: var(--gold); }
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  background: currentColor;
+  margin: 0 11px 3px 0;
+  vertical-align: middle;
+}
 .hero-body h1 {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(38px, 5.5vw, 76px);
