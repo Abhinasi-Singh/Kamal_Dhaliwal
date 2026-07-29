@@ -81,8 +81,28 @@ button, input, select, textarea { font: inherit; }
   min-height: 90vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(180deg, rgba(15, 17, 20, 0.92) 0%, rgba(20, 21, 23, 0.85) 60%, rgba(20, 21, 23, 0.96) 100%), url('../public/zero-down/hero-house.jpg') center bottom / cover no-repeat;
+  overflow: hidden;
   color: #ffffff;
+}
+.hero-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 85%;
+  z-index: 0;
+  pointer-events: none;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(15, 17, 20, 0.92) 0%, rgba(20, 21, 23, 0.85) 60%, rgba(20, 21, 23, 0.96) 100%);
+  z-index: 1;
 }
 .hero-body {
   width: min(var(--max), calc(100% - 40px));
@@ -720,15 +740,12 @@ details p { margin-top: 14px; color: var(--muted); font-size: 14px; line-height:
 
 /* ── iPad & Tablet Landscape Background Anchor ── */
 @media (max-width: 1024px) {
-  .hero {
-    background-position: center bottom !important;
-    background-size: cover !important;
+  .hero-bg-img {
+    object-position: center 85% !important;
   }
 }
 @media (orientation: landscape) and (max-width: 1024px) {
-  .hero {
-    background-position: center bottom !important;
-    background-size: cover !important;
-    min-height: 100vh !important;
+  .hero-bg-img {
+    object-position: center 85% !important;
   }
 }
