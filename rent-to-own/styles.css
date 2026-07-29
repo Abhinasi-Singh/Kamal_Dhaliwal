@@ -81,7 +81,7 @@ button, input, select, textarea { font: inherit; }
   min-height: 90vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(180deg, rgba(15, 17, 20, 0.92) 0%, rgba(20, 21, 23, 0.85) 60%, rgba(20, 21, 23, 0.96) 100%), url('../public/zero-down/hero-house.jpg') center 45% / cover no-repeat;
+  background: linear-gradient(180deg, rgba(15, 17, 20, 0.92) 0%, rgba(20, 21, 23, 0.85) 60%, rgba(20, 21, 23, 0.96) 100%), url('../public/zero-down/hero-house.jpg') center bottom / cover no-repeat;
   color: #ffffff;
 }
 .hero-body {
@@ -717,3 +717,18 @@ details p { margin-top: 14px; color: var(--muted); font-size: 14px; line-height:
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+
+/* ── iPad & Tablet Landscape Background Anchor ── */
+@media (max-width: 1024px) {
+  .hero {
+    background-position: center bottom !important;
+    background-size: cover !important;
+  }
+}
+@media (orientation: landscape) and (max-width: 1024px) {
+  .hero {
+    background-position: center bottom !important;
+    background-size: cover !important;
+    min-height: 100vh !important;
+  }
+}
