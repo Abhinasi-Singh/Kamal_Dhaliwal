@@ -635,10 +635,14 @@ details p { margin-top: 14px; color: var(--muted); font-size: 14px; line-height:
 .footer-legal { max-width: var(--max); margin: 14px auto 0; display: flex; flex-direction: column; gap: 6px; }
 .footer-legal .disclaimer, .footer-legal .trademarks { color: #9ca3af; font-size: 8.5px; line-height: 1.55; }
 .footer-legal strong { color: #d1d5db; }
-.footer-bottom { padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center; color: var(--gold); font-size: 10px; font-weight: 500; }
-.creator-credit { display: inline-flex; align-items: center; gap: 10px; color: var(--gold); text-decoration: none; font-size: 11.5px; transition: all 0.2s ease; padding: 7px 18px; border-radius: 6px; background: rgba(255,255,255,0.03); border: 1px solid rgba(194,161,90,0.3); margin-top: 2px; }
+.footer-bottom { padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; position: relative; gap: 15px; color: var(--gold); font-size: 8.5px; font-weight: 500; min-height: 44px; }
+@media (min-width: 900px) {
+  .creator-credit { position: absolute; left: 50%; transform: translateX(-50%); }
+  .creator-credit:hover { transform: translateX(-50%) translateY(-1px) !important; }
+}
+.creator-credit { display: inline-flex; align-items: center; gap: 10px; color: var(--gold); text-decoration: none; font-size: 11px; transition: all 0.2s ease; padding: 6px 16px; border-radius: 6px; background: rgba(255,255,255,0.03); border: 1px solid rgba(194,161,90,0.3); }
 .creator-credit:hover { opacity: 1; border-color: var(--gold); background: rgba(194,161,90,0.1); transform: translateY(-1px); }
-.creator-credit img { height: 24px; width: auto; object-fit: contain; }
+.creator-credit img { height: 22px; width: auto; object-fit: contain; }
 .creator-credit strong { color: #ffffff; font-weight: 700; }
 
 /* ── WhatsApp Button ───────────────────────── */
