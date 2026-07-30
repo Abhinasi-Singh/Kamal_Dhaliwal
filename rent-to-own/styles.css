@@ -635,7 +635,11 @@ details p { margin-top: 14px; color: var(--muted); font-size: 14px; line-height:
 .footer-legal { max-width: var(--max); margin: 14px auto 0; display: flex; flex-direction: column; gap: 6px; }
 .footer-legal .disclaimer, .footer-legal .trademarks { color: #9ca3af; font-size: 8.5px; line-height: 1.55; }
 .footer-legal strong { color: #d1d5db; }
-.footer-bottom { padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; gap: 12px; color: var(--gold); font-size: 8.5px; font-weight: 500; flex-wrap: wrap; }
+.footer-bottom { padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; gap: 12px; color: var(--gold); font-size: 8.5px; font-weight: 500; flex-wrap: wrap; }
+.creator-credit { display: inline-flex; align-items: center; gap: 8px; color: var(--gold); text-decoration: none; font-size: 11px; transition: opacity 0.2s, border-color 0.2s; padding: 5px 12px; border-radius: 4px; background: rgba(255,255,255,0.03); border: 1px solid rgba(194,161,90,0.25); }
+.creator-credit:hover { opacity: 0.95; border-color: var(--gold); background: rgba(194,161,90,0.08); }
+.creator-credit img { height: 20px; width: auto; object-fit: contain; }
+.creator-credit strong { color: #ffffff; font-weight: 700; }
 
 /* ── WhatsApp Button ───────────────────────── */
 .whatsapp-btn { position: fixed; z-index: 50; right: 20px; bottom: 20px; width: 52px; height: 52px; border-radius: 50%; box-shadow: 0 8px 24px rgba(0,0,0,0.22); transition: transform 0.2s; }
