@@ -610,6 +610,53 @@ details p { margin-top: 14px; color: var(--muted); font-size: 14px; line-height:
   box-shadow: 0 6px 18px rgba(181,18,36,0.25);
 }
 .lead-form button:hover { background: var(--burgundy); }
+.lead-form button:disabled { opacity: 0.7; cursor: not-allowed !important; }
+.lead-form button.loading .btn-arrow { display: inline-block; animation: spin 1s linear infinite; }
+
+/* ── Form Status Banners ──────────────────── */
+.form-status {
+  margin: 14px 0;
+  padding: 14px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.5;
+  display: none;
+}
+.form-status.success {
+  background: #e6f4ea;
+  border: 1px solid #a8dab5;
+  color: #137333;
+}
+.form-status.error {
+  background: #fce8e6;
+  border: 1px solid #f5c2c7;
+  color: #c5221f;
+}
+.status-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.status-content svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.status-content strong {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.status-content p {
+  margin: 0;
+  font-size: 12.5px;
+  opacity: 0.95;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
 .form-note { margin-top: 12px; color: #89918f; font-size: 9px; line-height: 1.5; text-align: center; }
 
 /* ── Footer ────────────────────────────────── */

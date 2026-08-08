@@ -284,7 +284,13 @@
         </div>
       </div>
 
-      <form class="lead-form" action="mailto:kamal27d@gmail.com" method="post" enctype="text/plain">
+      <form class="lead-form" id="leadForm" action="https://api.web3forms.com/submit" method="POST">
+        <!-- Web3Forms Configuration -->
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+        <input type="hidden" name="subject" value="New Zero Down Lead - Kamal Dhaliwal Website" />
+        <input type="hidden" name="from_name" value="Kamal Dhaliwal REALTOR® Website" />
+        <input type="checkbox" name="botcheck" class="hidden-honeypot" style="display: none !important;" />
+
         <div class="form-head">
           <span>Free Zero Down Review</span>
           <small>Confidential &amp; No Obligation</small>
@@ -308,7 +314,11 @@
         <label>Tell us about your timeline &amp; goals
           <textarea name="Message" rows="3" placeholder="When are you looking to buy? Any preferred GTA locations or home types?"></textarea>
         </label>
-        <button type="submit">Request My Free Review <span>→</span></button>
+        <div class="form-status" id="formStatus" aria-live="polite"></div>
+        <button type="submit" id="submitBtn">
+          <span class="btn-text">Request My Free Review</span>
+          <span class="btn-arrow">→</span>
+        </button>
         <p class="form-note">By submitting, you consent to being contacted about your inquiry. You can opt out at any time.</p>
       </form>
     </div>

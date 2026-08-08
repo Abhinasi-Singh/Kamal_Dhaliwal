@@ -110,7 +110,40 @@
     <section class="contact-section" id="contact">
       <div class="contact-inner">
         <div class="contact-copy"><p class="eyebrow dark">Let’s make your next move</p><h2>Tell me what home means <em>to you.</em></h2><p>Share a few details and Kamal will be in touch with you.</p><div class="contact-details"><a href="tel:+14167861194"><span>Phone</span>+1 (416) 786-1194</a><a href="mailto:kamal27d@gmail.com"><span>Email</span>kamal27d@gmail.com</a><p><span>Office</span>2798 Thamesgate Dr, Unit 1<br />Mississauga, ON L4T 4E8</p></div></div>
-        <form class="contact-form" action="mailto:kamal27d@gmail.com" method="post" enctype="text/plain"><div class="field-row"><label>First name<input name="First name" required placeholder="Your first name" /></label><label>Last name<input name="Last name" required placeholder="Your last name" /></label></div><div class="field-row"><label>Email<input type="email" name="Email" required placeholder="you@example.com" /></label><label>Phone<input type="tel" name="Phone" placeholder="(416) 555-0123" /></label></div><label>I’m interested in<select name="Interest"><option>Buying a home</option><option>Selling my property</option><option>Zero down options</option><option>Rent to own</option><option>Home evaluation</option></select></label><label>How can I help?<textarea name="Message" rows="4" placeholder="Tell me a little about your plans..."></textarea></label><button type="submit">Send my inquiry <span>→</span></button><small>By submitting, you consent to being contacted about your inquiry.</small></form>
+        <form class="contact-form" id="leadForm" action="https://api.web3forms.com/submit" method="POST">
+          <!-- Web3Forms Configuration -->
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+          <input type="hidden" name="subject" value="New Website Consultation Inquiry - Kamal Dhaliwal Website" />
+          <input type="hidden" name="from_name" value="Kamal Dhaliwal REALTOR® Website" />
+          <input type="checkbox" name="botcheck" class="hidden-honeypot" style="display: none !important;" />
+
+          <div class="field-row">
+            <label>First name<input name="First name" required placeholder="Your first name" autocomplete="given-name" /></label>
+            <label>Last name<input name="Last name" required placeholder="Your last name" autocomplete="family-name" /></label>
+          </div>
+          <div class="field-row">
+            <label>Email<input type="email" name="Email" required placeholder="you@example.com" autocomplete="email" /></label>
+            <label>Phone<input type="tel" name="Phone" placeholder="(416) 555-0123" autocomplete="tel" /></label>
+          </div>
+          <label>I’m interested in
+            <select name="Interest">
+              <option>Buying a home</option>
+              <option>Selling my property</option>
+              <option>Zero down options</option>
+              <option>Rent to own</option>
+              <option>Home evaluation</option>
+            </select>
+          </label>
+          <label>How can I help?
+            <textarea name="Message" rows="4" placeholder="Tell me a little about your plans..."></textarea>
+          </label>
+          <div class="form-status" id="formStatus" aria-live="polite"></div>
+          <button type="submit" id="submitBtn">
+            <span class="btn-text">Send my inquiry</span>
+            <span class="btn-arrow">→</span>
+          </button>
+          <small>By submitting, you consent to being contacted about your inquiry.</small>
+        </form>
       </div>
     </section>
   </main>
