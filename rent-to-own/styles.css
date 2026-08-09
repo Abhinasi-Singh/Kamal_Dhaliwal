@@ -689,7 +689,7 @@ details p { margin-top: 14px; color: var(--muted); font-size: 14px; line-height:
 }
 .creator-credit { display: inline-flex; align-items: center; gap: 10px; color: var(--gold); text-decoration: none; font-size: 11px; transition: all 0.2s ease; padding: 6px 16px; border-radius: 6px; background: rgba(255,255,255,0.03); border: 1px solid rgba(194,161,90,0.3); }
 .creator-credit:hover { opacity: 1; border-color: var(--gold); background: rgba(194,161,90,0.1); transform: translateY(-1px); }
-.creator-credit img { height: 22px; width: auto; object-fit: contain; }
+.creator-credit img { height: 26px; width: auto; object-fit: contain; }
 .creator-credit strong { color: #ffffff; font-weight: 700; }
 
 /* ── WhatsApp Button ───────────────────────── */
